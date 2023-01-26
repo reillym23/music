@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+   
+<style>
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{
+    display:block;
+}
+body{
+    line-height:1;
+}
+ol,ul{
+    list-style:none;
+}
+blockquote,q{
+    quotes:none;
+}
+blockquote:before,blockquote:after,
+q:before,q:after{
+    content:’’;
+    content:none;
+}
+/* remember to define visible focus styles! 
+:focus{
+    outline:?????;
+} */
+
+/* remember to highlight inserts somehow! */
+ins{
+    text-decoration:none;
+}
+del{
+    text-decoration:line-through;
+}
+
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+body {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1240px;
+	font-family: 'Times New Roman', Times, serif;;
+	background-color: #f6f6f6;
+}
+
+/* Typography */
+
+h1 {
+	font-size: 28px;
+	font-weight: 300;
+	flex: 1;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+h5 {
+	font-weight: 500;
+	line-height: 1.7em;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+h6 {
+	color: #666;
+	font-size: 14px;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+/* Product Layout */
+
+.product-filter {
+	display: flex;
+	padding: 30px 0;
+}
+
+.sort {
+	display: flex;
+	align-self: flex-end;
+}
+
+.collection-sort {
+ display: flex;
+	flex-direction: column;
+}
+
+.collection-sort:first-child {
+	padding-right: 20px;
+}
+
+label {
+	color: #666;
+	font-size: 10px;
+	font-weight: 500;
+	line-height: 2em;
+	text-transform: uppercase;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+.products {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.product-card {
+	display: flex;
+	flex-direction: column;
+	
+	padding: 2%;
+	flex: 1 16%;
+	
+	background-color: #FFF;
+	box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.25);
+}
+
+.product-image img {
+	width: 100%;
+}
+
+.product-info {
+	margin-top: auto;
+	padding-top: 20px;
+	text-align: center;
+}
+
+@media ( max-width: 920px ) {
+	
+	.product-card {
+		flex: 1 21%;
+	}
+	
+	.products .product-card:first-child, 
+	.products .product-card:nth-child(2) {
+		flex: 2 46%;
+	}
+	
+}
+
+@media ( max-width: 600px ) {
+	
+	.product-card {
+		flex: 1 46%;
+	}
+	
+}
+
+@media ( max-width: 480px ) {
+	
+	h1 {
+		margin-bottom: 20px;
+	}
+	
+	.product-filter {
+		flex-direction: column;
+	}
+	
+	.sort {
+		align-self: flex-start;
+	}
+	
+}
+h1{
+	font-style: normal;
+	font-family: 'Times New Roman', Times, serif;
+}
+h2{
+	font-family: 'Times New Roman', Times, serif;
+}
+</style>
+
+</head>
+<body>
+  <nav class="product-filter">
+		<h1>Dogs</h1>
+		
+		<div class="sort">
+			<div class="collection-sort">
+				<label>Filter by:</label>
+				<select>
+		      <option value="/">All Dogs</option>
+		      <option value="/">Large Dogs</option>
+		      <option value="/">Medium Dogs</option>
+		      <option value="/">Small Dogs</option>
+		   	</select>
+			</div>
+			
+			<div class="collection-sort">
+				<label>Sort by:</label>
+				<select>
+		      <option value="/">Featured</option>
+		      <option value="/">Best Selling</option>
+		      <option value="/">Alphabetically, A-Z</option>
+		      <option value="/">Alphabetically, Z-A</option>
+		      <option value="/">Price, low to high</option>
+		      <option value="/">Price, high to low</option>
+		      <option value="/">Date, new to old</option>
+		      <option value="/">Date, old to new</option>
+		    </select>
+			</div>
+		</div>
+	</nav>
+	
+	<section class="products">
+		<div class="product-card">
+			<div class="product-image">
+				<img src="images/Bull-Terrier-Hero-1200x628.jpg">
+			</div>
+			<div class="product-info">
+				<h5>Bull Terrier</h5>
+				<h6>$299.99</h6>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="images/pug.jpg">
+			</div>
+			<div class="product-info">
+				<h5>pug</h5>
+				<h6>$99.99</h6>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="images/Chinese-Crested-On-White-01.jpg">
+			</div>
+			<div class="product-info">
+				<h5>Chinese Crested</h5>
+				<h6>$149.99</h6>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="images/Dalmatian-dog.webp">
+			</div>
+			<div class="product-info">
+				<h5>Dalmatian</h5>
+				<h6>$499.99</h6>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="images/rott.jpg">
+			</div>
+			<div class="product-info">
+				<h5>Rottweiler</h5>
+				<h6>$999.99</h6>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="images/stb.jpg">
+			</div>
+			<div class="product-info">
+				<h5>St. Bernard</h5>
+				<h6>$2599.99</h6>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="images/Australian-Shepherd-Hero.jpg">
+			</div>
+			<div class="product-info">
+				<h5>Australian Shepherd</h5>
+				<h6>$199.99</h6>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="images/Chihuahua-standing-in-three-quarter-view.jpg">
+			</div>
+			<div class="product-info">
+				<h5>Chihuahua</h5>
+				<h6>$99.99</h6>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="images/Shiba-Inu_FeaturedImage-1024x615.webp">
+			</div>
+			<div class="product-info">
+				<h5>Shiba Inu</h5>
+				<h6>$899.99</h6>
+			</div>
+		</div>
+		
+		<div class="product-card">
+			<div class="product-image">
+				<img src="images/rhodesian-ridgeback-card-small.jpg">
+			</div>
+			<div class="product-info">
+				<h5>Rhodesian Ridgeback</h5>
+				<h6>$499.99</h6>
+			</div>
+		</div>
+		
+	</section>
+</body>
+<footer>
+ <br> Please stay updated on all of our new dogs!
+ <h6><br>Michael R - Web Design P5 - Walpole High School
+</footer>
+</html>
